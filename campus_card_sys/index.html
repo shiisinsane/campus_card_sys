@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"卡敌避"校园卡丢失信息管理平台</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 注册界面 -->
+    <div id="register-page" class="page">
+        <div class="container">
+            <div class="form-container">
+                <h2>用户注册</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="reg-student-id">学号:</label>
+                        <input type="text" id="reg-student-id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-full-name">姓名:</label>
+                        <input type="text" id="reg-full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">密码:</label>
+                        <input type="password" id="reg-password" required>
+                    </div>
+                    <button type="submit">注册</button>
+                </form>
+                <p class="switch-link">已有账号？<a href="#" onclick="showLogin()">立即登录</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录界面 -->
+    <div id="login-page" class="page active">
+        <div class="container">
+            <div class="form-container">
+                <h2>用户登录</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-student-id">学号:</label>
+                        <input type="text" id="login-student-id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-full-name">姓名:</label>
+                        <input type="text" id="login-full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">密码:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit">登录</button>
+                </form>
+                <p class="switch-link">没有账号？<a href="#" onclick="showRegister()">立即注册</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 首页 -->
+    <div id="home-page" class="page">
+        <div class="container">
+            <header>
+                <h1><img src="cardib.jpg" alt="卡敌避" class="title-logo">"卡敌避"校园卡丢失信息管理平台</h1>
+                <div class="user-info">
+                    <span id="user-name"></span>
+                    <span id="user-points"></span>
+                    <button onclick="logout()">退出登录</button>
+                </div>
+            </header>
+            
+            <div class="menu-grid">
+                <div class="menu-item" onclick="showReportCard()">
+                    <div class="menu-icon">📱</div>
+                    <h3>报告捡到校园卡</h3>
+                    <p>发现校园卡？快来报告吧</p>
+                </div>
+                
+                <div class="menu-item" onclick="showQueryCard()">
+                    <div class="menu-icon">🔍</div>
+                    <h3>查询丢失的校园卡</h3>
+                    <p>查看你的校园卡是否被找到</p>
+                </div>
+                
+                <div class="menu-item" onclick="showPublicList()">
+                    <div class="menu-icon">📋</div>
+                    <h3>公示列表</h3>
+                    <p>查看未认领的校园卡</p>
+                </div>
+                
+                <div class="menu-item" onclick="showForum()">
+                    <div class="menu-icon">💬</div>
+                    <h3>论坛</h3>
+                    <p>交流讨论，分享信息</p>
+                </div>
+                
+                <div class="menu-item" onclick="showRewards()">
+                    <div class="menu-icon">🎁</div>
+                    <h3>奖励兑换</h3>
+                    <p>用积分兑换精美奖品</p>
+                </div>
+
+                <div class="menu-item" onclick="showSmartLocationQuery()">
+                    <div class="menu-icon">🤖</div>
+                    <h3>智能地点查询</h3>
+                    <p>AI帮您找到最近的招领点</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 报告捡到校园卡页面 -->
+    <div id="report-card-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showHome()">← 返回</button>
+                <h2>报告捡到校园卡</h2>
+            </div>
+            <form id="report-card-form">
+                <div class="form-group">
+                    <label for="card-number">校园卡号:</label>
+                    <input type="text" id="card-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="found-location">发现地点:</label>
+                    <input type="text" id="found-location" required>
+                </div>
+                <div class="form-group">
+                    <label>处理方式:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="handler-option" value="1" required onchange="toggleContactField()"> 自行联系失主</label>
+                        <label><input type="radio" name="handler-option" value="2" required onchange="toggleContactField()"> 放置到指定地点</label>
+                    </div>
+                </div>
+
+                <!-- 自行联系时显示的联系方式输入框 -->
+                <div class="form-group" id="contact-field" style="display: none;">
+                    <label for="contact-phone">请输入您的联系方式（手机号/微信/QQ均可）:</label>
+                    <input type="text" id="contact-phone" placeholder="请输入联系方式">
+                    <small class="form-hint">选择"自行联系失主"时必须提供联系方式</small>
+                </div>
+
+                <!-- 放置指定地点时显示的地点选择 -->
+                <div class="form-group" id="pickup-location-field" style="display: none;">
+                    <label for="pickup-location">选择放置卡的拾领点:</label>
+                    <select id="pickup-location" required>
+                        <option value="">请选择固定拾领点</option>
+                        <option value="图书馆">图书馆</option>
+                        <option value="梧桐苑">梧桐苑</option>
+                        <option value="康桥苑">康桥苑</option>
+                        <option value="中一楼">中一楼</option>
+                    </select>
+                    <small class="form-hint">选择"放置到指定地点"时必须选择拾领点</small>
+                </div>
+                <div class="form-group">
+                    <label for="photo-upload">上传照片 (可选):</label>
+                    <input type="file" id="photo-upload" accept="image/*">
+                    <div id="photo-preview" class="photo-preview"></div>
+                </div>
+                <button type="submit">提交报告</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 查询丢失校园卡页面 -->
+    <div id="query-card-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showHome()">← 返回</button>
+                <h2>查询丢失的校园卡</h2>
+                <div class="time-filter-notice">
+                    <small>📅 仅查询最近半个月的记录</small>
+                </div>
+            </div>
+
+            <!-- 查询表单区域 -->
+            <div class="query-form-section">
+                <form id="query-card-form">
+                    <div class="form-group">
+                        <label for="query-student-id">学号:</label>
+                        <div class="input-with-button">
+                            <input type="text" id="query-student-id" placeholder="请输入学号" required>
+                            <button type="submit" id="query-btn">查询</button>
+                            <button type="button" id="clear-query-btn" onclick="clearQuery()">清空</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="query-status" class="query-status"></div>
+            </div>
+
+            <!-- 查询结果区域 -->
+            <div id="query-result-section" class="query-result-section">
+                <div id="query-result"></div>
+            </div>
+
+            <!-- 查询历史区域 -->
+            <div id="query-history-section" class="query-history-section" style="display: none;">
+                <h3>查询历史</h3>
+                <div id="query-history"></div>
+                <button type="button" onclick="clearHistory()" class="clear-history-btn">清空历史</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 公示列表页面 -->
+    <div id="public-list-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showHome()">← 返回</button>
+                <h2>公示列表</h2>
+                <div class="time-filter-notice">
+                    <small>📅 仅显示最近半个月的记录</small>
+                </div>
+            </div>
+
+            <!-- 热门丢失地点区域 -->
+            <div id="hot-locations-section" class="hot-locations-section">
+                <div class="section-header">
+                    <h3>🔥 热门丢失地点</h3>
+                    <div class="chart-controls">
+                        <button class="chart-toggle-btn active" data-chart="grid" onclick="switchChart('grid')">📊 卡片视图</button>
+                        <button class="chart-toggle-btn" data-chart="bar" onclick="switchChart('bar')">📈 柱状图</button>
+                        <button class="chart-toggle-btn" data-chart="pie" onclick="switchChart('pie')">🥧 饼图</button>
+                    </div>
+                </div>
+
+                <!-- 卡片网格视图 -->
+                <div id="hot-locations-grid" class="chart-view active">
+                    <div id="hot-locations-content">
+                        <p>加载中...</p>
+                    </div>
+                </div>
+
+                <!-- 图表视图容器 -->
+                <div id="hot-locations-charts" class="chart-view">
+                    <div class="chart-container">
+                        <canvas id="locationsChart"></canvas>
+                    </div>
+                    <div id="chart-legend" class="chart-legend"></div>
+                </div>
+            </div>
+
+            <!-- 未认领校园卡区域 -->
+            <div id="public-list-content" class="public-list-content">
+                <p>加载中...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 论坛页面 -->
+    <div id="forum-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showHome()">← 返回</button>
+                <h2>论坛</h2>
+                <button class="create-post-btn" onclick="showCreatePost()">发布帖子</button>
+            </div>
+            <div id="forum-posts">
+                <p>加载中...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 发布帖子页面 -->
+    <div id="create-post-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showForum()">← 返回</button>
+                <h2>发布帖子</h2>
+            </div>
+            <form id="create-post-form">
+                <div class="form-group">
+                    <label for="post-title">标题:</label>
+                    <input type="text" id="post-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="post-content">内容:</label>
+                    <textarea id="post-content" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="is-ad"> 这是一条广告
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="is-advice"> 这是一个建议/反馈
+                    </label>
+                </div>
+                <button type="submit">发布</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 奖励兑换页面 -->
+    <div id="rewards-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showHome()">← 返回</button>
+                <h2>奖励兑换</h2>
+                <div class="points-display">当前积分: <span id="current-points">0</span></div>
+            </div>
+            <div id="rewards-list">
+                <p>加载中...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 智能地点查询页面 -->
+    <div id="smart-location-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <button class="back-btn" onclick="showHome()">← 返回</button>
+                <h2>🤖 智能地点查询</h2>
+            </div>
+
+            <!-- 查询表单区域 -->
+            <div class="smart-query-form-section">
+                <div class="smart-query-intro">
+                    <h3>💡 使用说明</h3>
+                    <p>请描述您想查询的地点，AI将帮您识别地点并找到最近的招领点。</p>
+                    <p>例如：<em>"我在图书馆捡到卡"</em>、<em>"教学楼附近有招领点吗"</em>、<em>"梧桐苑最近的失物招领处"</em></p>
+                </div>
+
+                <form id="smart-location-form">
+                    <div class="form-group">
+                        <label for="location-input">请描述您的地点或需求：</label>
+                        <textarea id="location-input" rows="3" placeholder="例如：我在图书馆捡到了一张卡，请问最近的招领点在哪里？" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="smart-query-btn">🔍 智能查询</button>
+                        <button type="button" id="clear-smart-query-btn" onclick="clearSmartQuery()">🗑️ 清空</button>
+                    </div>
+                </form>
+                <div id="smart-query-status" class="query-status"></div>
+            </div>
+
+            <!-- 查询结果区域 -->
+            <div id="smart-query-result-section" class="smart-query-result-section">
+                <div id="smart-query-result"></div>
+            </div>
+
+            <!-- 校园地图区域 -->
+            <div id="campus-map-section" class="campus-map-section" style="display: none;">
+                <h3>📍 校园地图</h3>
+                <div class="map-container">
+                    <div class="map-wrapper">
+                        <img id="campus-map-image" src="campus_map.jpg" alt="校园地图">
+                        <div id="map-markers"></div>
+                    </div>
+                    <div class="map-legend">
+                        <h4>图例</h4>
+                        <div class="legend-item">
+                            <div class="legend-marker square blue"></div>
+                            <span>查询地点 (黑色方块)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-marker circle green"></div>
+                            <span>最近招领点 (红色圆点)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js库 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

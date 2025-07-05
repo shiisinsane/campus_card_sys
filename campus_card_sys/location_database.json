@@ -1,0 +1,488 @@
+{
+  "qianxuesen": {
+    "type": "building",
+    "x": 609,
+    "y": 794,
+    "name": "图书馆"
+  },
+  "wutongyuan": {
+    "type": "building",
+    "x": 273,
+    "y": 1067,
+    "name": "梧桐苑"
+  },
+  "sidaguangchang": {
+    "type": "building",
+    "x": 612,
+    "y": 917,
+    "name": "四大发明广场"
+  },
+  "jiao1": {
+    "type": "building",
+    "x": 822,
+    "y": 758,
+    "name": "教一楼"
+  },
+  "guojihuiyi": {
+    "type": "building",
+    "x": 822,
+    "y": 837,
+    "name": "国际会议中心"
+  },
+  "yifukexue": {
+    "type": "building",
+    "x": 822,
+    "y": 921,
+    "name": "逸夫科学楼"
+  },
+  "donghuayuan": {
+    "type": "building",
+    "x": 775,
+    "y": 601,
+    "name": "东花园"
+  },
+  "tengfeita": {
+    "type": "building",
+    "x": 609,
+    "y": 588,
+    "name": "腾飞塔"
+  },
+  "xihuayuan": {
+    "type": "building",
+    "x": 436,
+    "y": 598,
+    "name": "西花园"
+  },
+  "caihong": {
+    "type": "building",
+    "x": 137,
+    "y": 1064,
+    "name": "彩虹楼"
+  },
+  "gongchengfang1": {
+    "type": "building",
+    "x": 300,
+    "y": 751,
+    "name": "工程坊1"
+  },
+  "gongchengfang2": {
+    "type": "building",
+    "x": 300,
+    "y": 638,
+    "name": "工程坊2"
+  },
+  "xincailiao": {
+    "type": "building",
+    "x": 180,
+    "y": 611,
+    "name": "新材料大楼"
+  },
+  "huaxue": {
+    "type": "building",
+    "x": 173,
+    "y": 744,
+    "name": "化学楼"
+  },
+  "hanjie": {
+    "type": "building",
+    "x": 170,
+    "y": 857,
+    "name": "焊接研究所"
+  },
+  "wentizhongxin": {
+    "type": "building",
+    "x": 173,
+    "y": 944,
+    "name": "文体中心"
+  },
+  "jijiao": {
+    "type": "building",
+    "x": 253,
+    "y": 941,
+    "name": "计教中心"
+  },
+  "wutongchaoshi": {
+    "type": "building",
+    "x": 316,
+    "y": 931,
+    "name": "梧桐超市"
+  },
+  "yishuzhongxin": {
+    "type": "building",
+    "x": 296,
+    "y": 837,
+    "name": "艺术中心"
+  },
+  "jiao2": {
+    "type": "building",
+    "x": 396,
+    "y": 748,
+    "name": "教二楼"
+  },
+  "gongchengguan": {
+    "type": "building",
+    "x": 396,
+    "y": 841,
+    "name": "工程馆"
+  },
+  "zhuE": {
+    "type": "building",
+    "x": 609,
+    "y": 1084,
+    "name": "主E"
+  },
+  "zhuA": {
+    "type": "building",
+    "x": 716,
+    "y": 1047,
+    "name": "主A"
+  },
+  "zhuD": {
+    "type": "building",
+    "x": 716,
+    "y": 1134,
+    "name": "主D"
+  },
+  "zhuB": {
+    "type": "building",
+    "x": 496,
+    "y": 1047,
+    "name": "主B"
+  },
+  "zhuC": {
+    "type": "building",
+    "x": 503,
+    "y": 1144,
+    "name": "主C"
+  },
+  "xilanqiu": {
+    "type": "building",
+    "x": 170,
+    "y": 1210,
+    "name": "西篮球场"
+  },
+  "xipaiqiu": {
+    "type": "building",
+    "x": 170,
+    "y": 1290,
+    "name": "西排球场"
+  },
+  "xizuqiu": {
+    "type": "building",
+    "x": 177,
+    "y": 1373,
+    "name": "西足球场"
+  },
+  "wenzhi": {
+    "type": "building",
+    "x": 160,
+    "y": 1463,
+    "name": "文治书院"
+  },
+  "waiwenB": {
+    "type": "building",
+    "x": 147,
+    "y": 1553,
+    "name": "外文楼B"
+  },
+  "waiwenA": {
+    "type": "building",
+    "x": 226,
+    "y": 1546,
+    "name": "外文楼A"
+  },
+  "wenguan": {
+    "type": "building",
+    "x": 296,
+    "y": 1549,
+    "name": "管院"
+  },
+  "liuxuesushe": {
+    "type": "building",
+    "x": 393,
+    "y": 1559,
+    "name": "留学生宿舍"
+  },
+  "xianzitang": {
+    "type": "building",
+    "x": 276,
+    "y": 1463,
+    "name": "宪梓堂"
+  },
+  "nanmentingzi": {
+    "type": "building",
+    "x": 383,
+    "y": 1466,
+    "name": "南门亭子"
+  },
+  "xi13": {
+    "type": "building",
+    "x": 296,
+    "y": 1170,
+    "name": "西13舍"
+  },
+  "xi14": {
+    "type": "building",
+    "x": 300,
+    "y": 1217,
+    "name": "西14舍"
+  },
+  "xi15": {
+    "type": "building",
+    "x": 296,
+    "y": 1283,
+    "name": "西15舍"
+  },
+  "xi1": {
+    "type": "building",
+    "x": 399,
+    "y": 1174,
+    "name": "西1舍"
+  },
+  "xi3": {
+    "type": "building",
+    "x": 403,
+    "y": 1247,
+    "name": "西3舍"
+  },
+  "xi5": {
+    "type": "building",
+    "x": 403,
+    "y": 1357,
+    "name": "西5舍"
+  },
+  "siyuanzhongxin": {
+    "type": "building",
+    "x": 609,
+    "y": 1343,
+    "name": "思源中心"
+  },
+  "yanzhipo": {
+    "type": "building",
+    "x": 702,
+    "y": 1237,
+    "name": "胭脂坡"
+  },
+  "nanmenpenquan": {
+    "type": "building",
+    "x": 612,
+    "y": 1486,
+    "name": "南门喷泉"
+  },
+  "nanmen": {
+    "type": "building",
+    "x": 619,
+    "y": 1629,
+    "name": "南门"
+  },
+  "dongnanzuqiu": {
+    "type": "building",
+    "x": 915,
+    "y": 1343,
+    "name": "东南足球场"
+  },
+  "nanwangqiu": {
+    "type": "building",
+    "x": 915,
+    "y": 1513,
+    "name": "南网球场"
+  },
+  "pengkang": {
+    "type": "building",
+    "x": 1078,
+    "y": 1500,
+    "name": "彭康书院"
+  },
+  "yanjiusheng": {
+    "type": "building",
+    "x": 1078,
+    "y": 1320,
+    "name": "研究生宿舍"
+  },
+  "nanyang1": {
+    "type": "building",
+    "x": 942,
+    "y": 1203,
+    "name": "南洋书院1"
+  },
+  "nanyang2": {
+    "type": "building",
+    "x": 1052,
+    "y": 1200,
+    "name": "南洋书院2"
+  },
+  "lizhi": {
+    "type": "building",
+    "x": 945,
+    "y": 1134,
+    "name": "励志书院"
+  },
+  "kangqiaoyuan": {
+    "type": "building",
+    "x": 932,
+    "y": 1057,
+    "name": "康桥苑"
+  },
+  "zhongying": {
+    "type": "building",
+    "x": 1045,
+    "y": 1060,
+    "name": "仲英书院"
+  },
+  "xiaoyiyuan": {
+    "type": "building",
+    "x": 1128,
+    "y": 1050,
+    "name": "校医院"
+  },
+  "wenquanyushi": {
+    "type": "building",
+    "x": 1128,
+    "y": 1134,
+    "name": "温泉浴室"
+  },
+  "dongnanwangqiu": {
+    "type": "building",
+    "x": 1048,
+    "y": 931,
+    "name": "东南网球场"
+  },
+  "nengdong": {
+    "type": "building",
+    "x": 1125,
+    "y": 817,
+    "name": "能动学院"
+  },
+  "tiyuzhongxin": {
+    "type": "building",
+    "x": 1052,
+    "y": 808,
+    "name": "体育中心"
+  },
+  "xiqianjinian": {
+    "type": "building",
+    "x": 909,
+    "y": 691,
+    "name": "西迁纪念馆"
+  },
+  "dong3": {
+    "type": "building",
+    "x": 1018,
+    "y": 531,
+    "name": "东3楼"
+  },
+  "dong2": {
+    "type": "building",
+    "x": 1012,
+    "y": 458,
+    "name": "东2楼"
+  },
+  "dong1": {
+    "type": "building",
+    "x": 1018,
+    "y": 202,
+    "name": "东1楼"
+  },
+  "zhong1": {
+    "type": "building",
+    "x": 612,
+    "y": 325,
+    "name": "中一楼"
+  },
+  "zhong2": {
+    "type": "building",
+    "x": 825,
+    "y": 292,
+    "name": "中二楼"
+  },
+  "zhong3": {
+    "type": "building",
+    "x": 396,
+    "y": 292,
+    "name": "中三楼"
+  },
+  "like": {
+    "type": "building",
+    "x": 616,
+    "y": 435,
+    "name": "理科楼"
+  },
+  "xiyilou": {
+    "type": "building",
+    "x": 273,
+    "y": 259,
+    "name": "西一楼"
+  },
+  "xierlou": {
+    "type": "building",
+    "x": 240,
+    "y": 471,
+    "name": "西二楼"
+  },
+  "ruanjian": {
+    "type": "building",
+    "x": 516,
+    "y": 209,
+    "name": "软件学院"
+  },
+  "beimen": {
+    "type": "building",
+    "x": 609,
+    "y": 76,
+    "name": "北门"
+  },
+  "ximen": {
+    "type": "building",
+    "x": 87,
+    "y": 991,
+    "name": "西门"
+  },
+  "dongnanmen": {
+    "type": "building",
+    "x": 1188,
+    "y": 991,
+    "name": "东南门"
+  },
+  "dongmen": {
+    "type": "building",
+    "x": 1185,
+    "y": 515,
+    "name": "东门"
+  },
+  "siyuanta": {
+    "type": "building",
+    "x": 616,
+    "y": 192,
+    "name": "思源塔"
+  },
+  "chongshishyuan": {
+    "type": "building",
+    "x": 297,
+    "y": 1357,
+    "name": "崇实书院"
+  },
+  "qiantu_1": {
+    "type": "lost_and_found",
+    "x": 619,
+    "y": 768,
+    "name": "图书馆"
+  },
+  "wutongyuan_2": {
+    "type": "lost_and_found",
+    "x": 276,
+    "y": 1060,
+    "name": "梧桐苑"
+  },
+  "kangqiaoyuan_3": {
+    "type": "lost_and_found",
+    "x": 928,
+    "y": 1050,
+    "name": "康桥苑"
+  },
+  "zhong1_4": {
+    "type": "lost_and_found",
+    "x": 612,
+    "y": 315,
+    "name": "中一楼"
+  }
+}
